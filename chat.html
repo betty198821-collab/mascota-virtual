@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Error 404 — Chat</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body class="chat-page">
+
+  <header class="chat-header">
+    <a href="select.html" class="back-link" title="Volver">←</a>
+    <div class="header-actions">
+      <button id="soundBtn" class="reset-btn" title="Sonido de mensajes">Sonido: sí</button>
+      <button id="voiceBtn" class="reset-btn" title="Voz del bot">Voz: no</button>
+      <button id="resetBtn" class="reset-btn" title="Reiniciar chat">Reiniciar chat</button>
+    </div>
+  </header>
+
+  <section class="pet-face-area">
+    <div class="pet-avatar-large">
+      <img id="petImage" src="images/error404_neutral.png" alt="Error 404">
+      <div id="petFallback" class="avatar-fallback-large">404</div>
+    </div>
+    <h1 id="petTitle">Error 404</h1>
+    <p id="petStatus" class="pet-status">en línea... o algo así</p>
+    <p id="verityCounter" class="verity-counter"></p>
+  </section>
+
+  <main class="chat-window" id="chatWindow"></main>
+
+  <form class="chat-input-bar" id="chatForm">
+    <input
+      type="text"
+      id="chatInput"
+      placeholder="Dile algo a Error 404..."
+      autocomplete="off"
+    />
+    <button type="submit" id="sendBtn">Enviar</button>
+  </form>
+
+  <audio id="verityAudio" src="audio/verity_theme.wav" loop></audio>
+
+<script src="js/translate.js"></script>
+<script src="js/topics.js"></script>
+<script src="js/memory.js"></script>
+<script src="js/moderation.js"></script>
+<script src="js/support.js"></script>
+<script src="js/advice-extra.js"></script>
+<script src="js/pet-brain.js"></script>
+<script src="js/personality.js"></script>
+<script src="js/understand-en.js"></script>
+<script src="js/extras.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/web-lookup.js"></script>
+<script src="js/verity-mode.js"></script>
+<script src="js/chat.js"></script>
+</body>
+</html>

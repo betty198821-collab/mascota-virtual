@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elige tu mascota virtual</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="selection-page">
+
+  <a href="index.html" class="menu-link" id="menuLink">← Menú</a>
+
+  <header class="site-header">
+    <h1 id="selTitle">Elige tu <span class="glitch-text" data-text="mascota">mascota</span></h1>
+    <p class="subtitle" id="selSubtitle">Selecciona con quién quieres hablar hoy.</p>
+  </header>
+
+  <main class="pet-grid">
+
+    <!-- Mascota disponible: Error 404 -->
+    <article class="pet-card" data-pet="error404" tabindex="0" id="mainPetCard">
+      <div class="pet-avatar">
+        <img id="mainPetImage" src="images/error404_neutral.png" alt="Error 404" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div id="mainPetFallback" class="avatar-fallback">404</div>
+      </div>
+      <h2 class="pet-name" id="mainPetName">Error 404</h2>
+      <p class="pet-desc" id="mainPetDesc">Habla raro, con un aire lúgubre y un poco roto... pero es de las criaturas más amables que vas a encontrar. Solo quiere que estés bien.</p>
+      <button class="select-btn" id="mainPetBtn">Hablar con Error 404</button>
+    </article>
+
+    <!-- Placeholder de futuras mascotas -->
+    <article class="pet-card locked">
+      <div class="pet-avatar locked-avatar">
+        <span class="lock-icon">＋</span>
+      </div>
+      <h2 class="pet-name">???</h2>
+      <p class="pet-desc" id="soonDesc">Más mascotas pronto.</p>
+      <button class="select-btn" id="soonBtn" disabled>Próximamente</button>
+    </article>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>hecho con cariño • proyecto personal</p>
+  </footer>
+
+<script src="js/translate.js"></script>
+<script src="js/verity-mode.js"></script>
+<script src="js/selection.js"></script>
+</body>
+</html>

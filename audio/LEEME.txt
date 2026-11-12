@@ -1,0 +1,1 @@
+Audio de Verity: audio/verity_theme.wav (el nombre que usa chat.html).

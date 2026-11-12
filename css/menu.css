@@ -1,0 +1,84 @@
+/* Menú principal y panel de configuración */
+.menu-page {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  /* Poné tu póster en images/menu_banner.png (recomendado: horizontal, 1920x1080) */
+  background: #0a0a0a url('../images/menu_banner.png') center / cover no-repeat;
+}
+/* capa oscura abajo para que los botones se lean sobre cualquier dibujo */
+.menu-page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.25) 55%, rgba(0,0,0,0) 100%);
+}
+.menu-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 480px;
+  padding: 0 20px 7vh;
+  text-align: center;
+}
+.menu-title { font-size: 2.2rem; letter-spacing: 1px; }
+.menu-tagline { color: var(--grey-300); margin: 8px 0 24px; }
+.menu-buttons { display: flex; flex-direction: column; gap: 12px; }
+
+.menu-btn {
+  display: block;
+  width: 100%;
+  padding: 14px 18px;
+  border: 1px solid var(--grey-500);
+  border-radius: 10px;
+  background: rgba(20, 20, 20, 0.88);
+  color: var(--white);
+  font-family: inherit;
+  font-size: 1.1rem;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+.menu-btn:hover, .menu-btn:focus-visible { background: var(--grey-700); transform: translateY(-2px); outline: none; }
+.menu-btn-primary { background: var(--white); color: var(--black); font-weight: bold; font-size: 1.25rem; }
+.menu-btn-primary:hover, .menu-btn-primary:focus-visible { background: var(--grey-300); }
+.menu-btn.small { font-size: 0.9rem; padding: 10px 14px; }
+
+/* panel de configuración */
+.settings-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 20px;
+}
+.settings-overlay[hidden] { display: none; }
+.settings-panel {
+  width: 100%;
+  max-width: 400px;
+  background: var(--grey-900);
+  border: 1px solid var(--grey-700);
+  border-radius: 14px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.settings-panel h2 { text-align: center; margin-bottom: 4px; }
+.setting-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; color: var(--white); }
+.setting-row select {
+  background: var(--grey-800); color: var(--white); border: 1px solid var(--grey-700);
+  border-radius: 6px; padding: 6px 10px; font-family: inherit;
+}
+.setting-row input[type="checkbox"] { width: 22px; height: 22px; accent-color: #b3b3b3; cursor: pointer; }
+.settings-note { color: var(--grey-500); font-size: 0.78rem; line-height: 1.4; }
+
+/* flecha para volver al menú desde la selección de mascota */
+.selection-page .menu-back { position: absolute; top: 16px; left: 20px; }
